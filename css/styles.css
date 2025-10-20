@@ -1,0 +1,391 @@
+/* -------------------------------------------------------------------
+   CSS PROFISSIONAL - LIVRARIA RÚSTICA MELHORADA
+   ------------------------------------------------------------------- */
+
+   @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400;600&display=swap');
+
+   /* Variáveis para consistência visual */
+   :root {
+       --color-primary: #5d4037;     /* Marrom Café (Forte) */
+       --color-secondary: #a1887f;   /* Madeira Clara/Bege Sujo */
+       --color-accent: #8d6e63;      /* Sépia (Acento) */
+       --color-background: #fdfaf0;  /* Off-White (Papel Velho) */
+       --color-dark: #333333;        /* Texto Escuro */
+       --shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+   }
+   
+   /* Base */
+   * { box-sizing: border-box; }
+   body {
+       font-family: 'Open Sans', sans-serif;
+       color: var(--color-dark);
+       background-color: var(--color-background);
+       margin: 0;
+       line-height: 1.6;
+   }
+   
+   h1, h2, h3 {
+       font-family: 'Playfair Display', serif;
+       color: var(--color-primary);
+       margin: 0 0 15px 0;
+   }
+   
+   a {
+       color: var(--color-primary);
+       text-decoration: none;
+       transition: color 0.3s;
+   }
+   
+   a:hover {
+       color: var(--color-accent);
+   }
+   
+   .container {
+       max-width: 1200px;
+       margin: 0 auto;
+       padding: 0 20px;
+   }
+   
+   section {
+       padding: 60px 0;
+       text-align: center;
+   }
+   
+   .section-title {
+       font-size: 2.5em;
+       padding-bottom: 10px;
+       border-bottom: 3px solid var(--color-secondary);
+       display: inline-block;
+       margin-bottom: 40px;
+   }
+   
+   /* Botões */
+   .btn {
+       display: inline-block;
+       padding: 10px 25px;
+       border-radius: 5px;
+       font-weight: 600;
+       transition: background-color 0.3s, transform 0.2s;
+       text-transform: uppercase;
+       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   }
+   
+   .primary-btn {
+       background-color: var(--color-primary);
+       color: white;
+   }
+   
+   .primary-btn:hover {
+       background-color: var(--color-accent);
+       transform: translateY(-2px);
+   }
+   
+   .secondary-btn {
+       background-color: var(--color-secondary);
+       color: var(--color-dark);
+   }
+   
+   .secondary-btn:hover {
+       background-color: var(--color-primary);
+       color: white;
+   }
+   
+   /* -------------------------------------------------------------------
+      HEADER e NAV
+      ------------------------------------------------------------------- */
+   header {
+       background-color: var(--color-primary);
+       box-shadow: var(--shadow);
+       padding: 15px 0;
+   }
+   
+   .header-container {
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+   }
+   
+   .logo {
+       font-size: 1.8em;
+       color: white;
+   }
+   
+   nav ul {
+       list-style: none;
+       display: flex;
+       gap: 25px;
+   }
+   
+   nav ul li a {
+       color: white;
+       padding: 5px 0;
+       border-bottom: 2px solid transparent;
+   }
+   
+   nav ul li a:hover {
+       color: var(--color-secondary);
+       border-bottom: 2px solid var(--color-secondary);
+   }
+   
+   .cart-icon a {
+       background-color: var(--color-accent);
+       color: white;
+       padding: 5px 10px;
+       border-radius: 5px;
+       display: flex;
+       align-items: center;
+       font-size: 0.9em;
+   }
+   
+   .cart-count {
+       background-color: #e57373;
+       color: white;
+       border-radius: 50%;
+       padding: 2px 6px;
+       font-size: 0.7em;
+       margin-left: 5px;
+   }
+   
+   /* -------------------------------------------------------------------
+      HERO (Banner)
+      ------------------------------------------------------------------- */
+   .hero {
+       display: flex;
+       align-items: center;
+       justify-content: space-around;
+       min-height: 450px;
+       background: linear-gradient(135deg, var(--color-background), var(--color-secondary));
+       padding: 60px 20px;
+       border-bottom: 5px solid var(--color-accent);
+   }
+   
+   .hero-content {
+       max-width: 500px;
+       text-align: left;
+   }
+   
+   .hero-content h1 {
+       font-size: 3.5em;
+       color: var(--color-dark);
+       line-height: 1.1;
+   }
+   
+   .hero-content p {
+       font-size: 1.2em;
+       margin-bottom: 30px;
+   }
+   
+   .hero-image {
+       max-width: 40%;
+       height: auto;
+       border-radius: 8px;
+       box-shadow: var(--shadow);
+       border: 5px solid white;
+   }
+   
+   /* -------------------------------------------------------------------
+      LIVROS (Produtos Grid)
+      ------------------------------------------------------------------- */
+   .products-grid {
+       display: grid;
+       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+       gap: 30px;
+       margin-top: 40px;
+   }
+   
+   .livro-card {
+       background-color: white;
+       border: 1px solid var(--color-secondary);
+       border-radius: 8px;
+       padding: 20px;
+       box-shadow: var(--shadow);
+       transition: transform 0.3s, box-shadow 0.3s;
+   }
+   
+   .livro-card:hover {
+       transform: translateY(-5px);
+       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+   }
+   
+   .livro-card img {
+       max-width: 100%;
+       height: 300px; /* Altura fixa para uniformidade */
+       object-fit: cover;
+       border-radius: 4px;
+       margin-bottom: 15px;
+       border: 2px solid var(--color-accent);
+   }
+   
+   .livro-card h3 {
+       font-size: 1.4em;
+   }
+   
+   .livro-card .tag {
+       display: inline-block;
+       background-color: var(--color-secondary);
+       color: var(--color-dark);
+       padding: 4px 10px;
+       border-radius: 3px;
+       font-size: 0.8em;
+       margin-bottom: 10px;
+   }
+   
+   /* -------------------------------------------------------------------
+      SOBRE NÓS
+      ------------------------------------------------------------------- */
+   .about-section {
+       background-color: var(--color-secondary);
+       color: var(--color-dark);
+   }
+   
+   .about-section .section-title {
+       color: var(--color-primary);
+       border-color: var(--color-primary);
+   }
+   
+   .about-section .quote {
+       font-size: 1.6em;
+       max-width: 800px;
+       margin: 30px auto 0;
+       line-height: 1.4;
+       font-style: italic;
+       color: var(--color-dark);
+   }
+   
+   /* -------------------------------------------------------------------
+      CONTATO (Tabela)
+      ------------------------------------------------------------------- */
+   .contact-section {
+       background-color: var(--color-background);
+   }
+   
+   .contact-section table {
+       width: 90%;
+       max-width: 900px;
+       margin: 40px auto;
+       border-collapse: collapse;
+       box-shadow: var(--shadow);
+   }
+   
+   .contact-section th, .contact-section td {
+       border: 1px solid var(--color-secondary);
+       padding: 15px;
+       text-align: left;
+   }
+   
+   .contact-section thead tr {
+       background-color: var(--color-accent);
+       color: white;
+       font-weight: 700;
+   }
+   
+   .contact-section tbody tr:nth-child(even) {
+       background-color: #fcefe4; /* Listras leves */
+   }
+   
+   /* -------------------------------------------------------------------
+      RODAPÉ (Footer)
+      ------------------------------------------------------------------- */
+   footer {
+       background-color: var(--color-dark);
+       color: var(--color-secondary);
+       padding: 20px 0;
+       font-size: 0.9em;
+   }
+   
+   .footer-content {
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       flex-wrap: wrap;
+       max-width: 1200px;
+       margin: 0 auto;
+       padding: 0 20px;
+   }
+   
+   .footer-links a {
+       color: var(--color-secondary);
+       margin-left: 15px;
+   }
+   
+   .footer-links a:hover {
+       color: white;
+   }
+   
+   /* -------------------------------------------------------------------
+      RESPONSIVIDADE (Ajustes para Mobile)
+      ------------------------------------------------------------------- */
+   @media (max-width: 900px) {
+       .hero {
+           flex-direction: column;
+           padding-top: 40px;
+           min-height: auto;
+       }
+   
+       .hero-content {
+           text-align: center;
+           max-width: 100%;
+           margin-bottom: 30px;
+       }
+       
+       .hero-content h1 {
+           font-size: 2.5em;
+       }
+   
+       .hero-image {
+           max-width: 60%;
+       }
+   }
+   
+   @media (max-width: 600px) {
+       .header-container {
+           flex-direction: column;
+           text-align: center;
+       }
+   
+       nav ul {
+           margin-top: 15px;
+           gap: 15px;
+       }
+       
+       .cart-icon {
+           margin-top: 10px;
+       }
+   
+       .footer-content {
+           flex-direction: column;
+       }
+   
+       .footer-links {
+           margin-top: 15px;
+       }
+   
+       /* Tabela Responsiva (Transforma em blocos) */
+       .contact-section table, .contact-section thead, .contact-section tbody, .contact-section th, .contact-section td, .contact-section tr {
+           display: block;
+       }
+       .contact-section thead {
+           display: none;
+       }
+       .contact-section tr {
+           margin-bottom: 15px;
+           border: 1px solid var(--color-secondary);
+           border-radius: 8px;
+       }
+       .contact-section td {
+           border: none;
+           position: relative;
+           text-align: right;
+           padding-left: 50%;
+           white-space: normal;
+       }
+       .contact-section td::before {
+           content: attr(data-label);
+           position: absolute;
+           left: 10px;
+           width: 45%;
+           font-weight: 600;
+           color: var(--color-primary);
+           text-align: left;
+       }
+   }
