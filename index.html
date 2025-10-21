@@ -3,23 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Troca de Livro ❤️📚📖 | Livraria Rústica</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Troca de Livro ❤️📚📖 | Livraria Comunitária</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css"> 
 </head>
 <body>
 
     <header>
-        <div class="header-container">
-            <div class="logo">Troca de Livro ❤️📚📖</div>
+        <div class="header-container container"> <div class="logo">Troca de Livro ❤️📚📖</div>
             <nav>
                 <ul>
                     <li><a href="#">Início</a></li>
                     <li><a href="#livros">Livros</a></li>
                     <li><a href="#sobre">Sobre</a></li>
                     <li><a href="#contato">Contato</a></li>
-                    <li class="cart-icon" id="cart-icon">
-                        <a href="#">
-                            <i class="fas fa-shopping-cart"></i> Carrinho
+                    <li class="cart-icon">
+                        <a href="#carrinho" aria-label="Carrinho de Trocas">
+                            <i class="fas fa-shopping-cart"></i>
                             <span class="cart-count" id="cart-count">0</span>
                         </a>
                     </li>
@@ -29,100 +29,81 @@
     </header>
 
     <section class="hero">
-        <div class="hero-content">
-            <h1>📚 Encontre seu próximo livro aqui!</h1>
+        <div class="hero-content container"> <h1>📚 Encontre seu próximo livro aqui!</h1>
             <p>Devolva livros com facilidade e responsabilidade. Participe da nossa corrente de leitura e conhecimento.</p>
             <a href="#livros" class="btn primary-btn">Ver Livros Disponíveis</a>
         </div>
-        <img src="img/livros-banner.jpg" alt="Estante de livros de uma livraria rústica." class="hero-image">
     </section>
 
     <main class="container">
         <section class="livros" id="livros">
             <h2 class="section-title">Livros Disponíveis para Troca</h2>
             
-            <div class="products-grid" id="products-grid">
-
-        
-
+            <div class="products-grid">
                 <div class="livro-card">
-                    <a href="livro2.html">
+                    <a href="livro 4.html" class="book-link" aria-label="Detalhes do livro: Como eu era antes de você">
                         <img src="img/Como eu era antes de você.jpg" alt="Capa do Livro: Como eu era antes de você">
                     </a>
                     <h3>Como eu era antes de você</h3>
                     <p class="tag">Romance</p>
-                    <a href="#" class="btn secondary-btn">Detalhes</a>
+                    <a href="#" class="btn secondary-btn" role="button">Trocar</a>
                 </div>
 
                 <div class="livro-card">
-                    <a href="livro3.html">
+                    <a href="livro 1.html" class="book-link" aria-label="Detalhes do livro: A Rainha do Nada">
                         <img src="img/A rainha do nada.jpg" alt="Capa do Livro: A rainha do nada">
                     </a>
                     <h3>A Rainha do Nada</h3>
                     <p class="tag">Fantasia</p>
-                    <a href="#" class="btn secondary-btn">Detalhes</a>
+                    <a href="#" class="btn secondary-btn" role="button">Trocar</a>
                 </div>
 
                 <div class="livro-card">
-                    <a href="livro4.html">
+                    <a href="livro 3.html" class="book-link" aria-label="Detalhes do livro: O Rei Perverso">
                         <img src="img/O rei perverso.jpg" alt="Capa do Livro: O rei perverso">
                     </a>
                     <h3>O Rei Perverso</h3>
                     <p class="tag">Fantasia</p>
-                    <a href="#" class="btn secondary-btn">Detalhes</a>
+                    <a href="#" class="btn secondary-btn" role="button">Trocar</a>
                 </div>
-                
-            </div>
+                </div>
         </section>
     </main>
     
     <section id="sobre" class="about-section">
         <div class="container">
             <h2 class="section-title">Sobre Nós</h2>
-            <p class="quote">
-                “A devolução dos livros é essencial para que mais leitores possam aproveitar cada história. Ao devolver no prazo, você ajuda a manter o acesso livre e organizado para todos. Faça parte dessa corrente de leitura e conhecimento!”
-            </p>
+            <blockquote class="quote"> <p>
+                    “A devolução dos livros é essencial para que mais leitores possam aproveitar cada história. Ao devolver no prazo, você ajuda a manter o acesso livre e organizado para todos. Faça parte dessa corrente de leitura e conhecimento!”
+                </p>
+            </blockquote>
         </div>
     </section>
     
     <section id="contato" class="contact-section">
         <div class="container">
             <h2 class="section-title">Nossas Unidades</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>UF</th>
-                        <th>Cidade</th>
-                        <th>Endereço</th>
-                        <th>Contato</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td data-label="UF">SC</td>
-                        <td data-label="Cidade">Rio do Sul</td>
-                        <td data-label="Endereço">Av. Oscar Barcelos - 123 - Centro</td>
-                        <td data-label="Contato">(47) 3521-1234</td>
-                    </tr>
-                    <tr>
-                        <td data-label="UF">AC</td>
-                        <td data-label="Cidade">Rio Branco</td>
-                        <td data-label="Endereço">Av. Barão de Rio Branco</td>
-                        <td data-label="Contato">(68) 3671-1432</td>
-                    </tr>
-                    <tr>
-                        <td data-label="UF">SP</td>
-                        <td data-label="Cidade">Osasco</td>
-                        <td data-label="Endereço">Rua do Café</td>
-                        <td data-label="Contato">(11) 3671-1432</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="table-wrapper"> <table>
+                    <thead>
+                        <tr>
+                            <th>UF</th>
+                            <th>Cidade</th>
+                            <th>Endereço</th>
+                            <th>Contato</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td data-label="UF">SC</td><td data-label="Cidade">Rio do Sul</td><td data-label="Endereço">Av. Oscar Barcelos - 123 - Centro</td><td data-label="Contato">(47) 3521-1234</td></tr>
+                        <tr><td data-label="UF">AC</td><td data-label="Cidade">Rio Branco</td><td data-label="Endereço">Av. Barão de Rio Branco</td><td data-label="Contato">(68) 3671-1432</td></tr>
+                        <tr><td data-label="UF">SP</td><td data-label="Cidade">Osasco</td><td data-label="Endereço">Rua do Café</td><td data-label="Contato">(11) 3671-1432</td></tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </section>
-
+    
     <footer>
-        <div class="footer-content">
+        <div class="footer-content container">
             <p>&copy; 2025 Troca de Livro. Todos os direitos reservados.</p>
             <div class="footer-links">
                 <a href="#">Política de Privacidade</a>
@@ -133,7 +114,5 @@
     </footer>
     
     <script src="js/scripts.js"></script>
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </body>
 </html>

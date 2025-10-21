@@ -1,0 +1,84 @@
+/* ========================================= */
+/* CSS ORGANIZADO E MELHORADO (ESTILO LAVANDA) */
+/* ========================================= */
+
+/* 1. PALETA DE CORES DEFINITIVA */
+/* Fundo: #F8F8FF (GhostWhite) */
+/* Borda/Suave: #D8BFD8 (Thistle/Lavanda Claro) */
+/* Destaque Principal: #9370DB (MediumPurple/Roxo para Ação) */
+/* Texto Escuro: #483D8B (DarkSlateBlue - para melhor legibilidade) */
+
+/* 2. ESTILOS GERAIS E BODY */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte profissional e moderna */
+    background-color: #F8F8FF;
+    color: #483D8B; /* Roxo escuro para bom contraste */
+    margin: 0;
+    padding: 0;
+    /* Centraliza o container na tela */
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+}
+
+/* 3. CONTAINER PRINCIPAL (O "QUADRADO" ORGANIZADO) */
+.container-livros {
+    max-width: 750px; /* Levemente mais largo para um visual mais aberto */
+    width: 90%;
+    margin: 40px auto;
+    padding: 30px 40px; /* Preenchimento generoso */
+    background-color: #FFFFFF;
+    
+    /* Borda sutil, mas caixa mais definida */
+    border: 1px solid #E6E6FA; 
+    border-radius: 18px; 
+    
+    /* Sombra mais suave e limpa para um visual "flutuante" */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); 
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.container-livros:hover {
+    transform: translateY(-3px); /* Efeito de elevação elegante */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* 4. TÍTULO E HIERARQUIA */
+h2 {
+    color: #9370DB; /* Roxo principal para o título */
+    font-size: 2.2em;
+    font-weight: 700; /* Destaque na hierarquia */
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    
+    /* Linha de divisão elegante */
+    border-bottom: 3px solid #D8BFD8; 
+    padding-bottom: 12px;
+    margin-bottom: 30px;
+}
+
+/* 5. TEXTO E PARÁGRAFO */
+p {
+    text-align: justify;
+    line-height: 1.7; /* Melhor espaçamento */
+    font-size: 1.05em;
+    color: #555555; /* Cinza suave para o corpo do texto */
+    margin-bottom: 25px;
+}
+
+/* 6. IMAGEM (MÍDIA) */
+img {
+    display: block;
+    max-width: 100%;
+    width: 250px; /* Largura definida para melhor estética */
+    height: auto;
+    margin: 20px auto; /* Espaço uniforme ao redor */
+    
+    /* Borda e sombra para destacar a mídia */
+    border: 5px solid #D8BFD8; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: all 0.4}
