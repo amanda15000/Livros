@@ -1,6 +1,6 @@
 /* ========================================= */
 /* CSS COMPLETO E ORGANIZADO (ESTILO LAVANDA LIMPO) */
-/* INCLUI BOTÃO DE RETORNO FIXO NA BASE */
+/* INCLUI BOTÃO DE RETORNO FIXO NA BASE E DETALHE DO LIVRO */
 /* ========================================= */
 
 /* 1. VARIÁVEIS DE CORES E RESET BÁSICO */
@@ -362,7 +362,6 @@ footer {
     background-color: var(--color-dark); 
 }
 
-
 /* ========================================= */
 /* 8. RESPONSIVIDADE (MOBILE FIRST) */
 /* ========================================= */
@@ -447,5 +446,209 @@ footer {
     
     .products-grid {
         grid-template-columns: 1fr; /* Uma coluna no celular */
+    }
+}
+
+/* ========================================= */
+/* 9. PÁGINA INDIVIDUAL DO LIVRO */
+/* ========================================= */
+
+/* ========================================================================= */
+/* --- BOOK DETAIL PAGE (detalhe-livro) --- */
+/* ========================================================================= */
+
+/* Using a more modern, minimal approach to variables for better contrast and feel */
+:root {
+    --color-primary: #007BFF; /* A vibrant blue for main actions/titles */
+    --color-secondary: #0056b3; /* Darker blue for hover/gradients */
+    --color-accent: #28a745; /* A complementary green for tags/highlights */
+    --color-dark: #343a40; /* Nearly black for body text */
+    --color-light: #f8f9fa; /* Off-white background */
+    --color-white: #ffffff;
+    --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.15);
+    --spacing-sm: 10px;
+    --spacing-md: 20px;
+    --spacing-lg: 40px;
+}
+
+.detalhe-livro .book-detail-container {
+    /* Centering the content in the viewport with a max width for better reading experience */
+    max-width: 1200px; 
+    margin: var(--spacing-lg) auto;
+    padding: var(--spacing-lg);
+    background-color: var(--color-white); /* Ensures image and info stand out */
+    border-radius: 15px; /* Softer, more pleasing rounded corners */
+    box-shadow: var(--shadow-light); /* Subtle lift off the page */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-lg);
+}
+
+/* --- BOOK COVER IMAGE --- */
+.detalhe-livro .book-image {
+    /* Maintain aspect ratio better on smaller screens */
+    flex: 1 1 300px;
+    max-width: 350px; /* Slightly narrower for a more focused book look */
+    border-radius: 10px;
+    overflow: hidden;
+    /* Deeper, more noticeable shadow for a "floating" effect */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15); 
+    transition: transform 0.4s ease-out, box-shadow 0.4s ease-out;
+}
+
+.detalhe-livro .book-image img {
+    width: 100%;
+    /* Added a subtle zoom on hover for a sophisticated feel */
+    transition: transform 0.5s ease; 
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+.detalhe-livro .book-image:hover {
+    transform: translateY(-8px); /* Deeper lift on hover */
+    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+}
+
+.detalhe-livro .book-image:hover img {
+    transform: scale(1.05); /* Subtle zoom effect */
+}
+
+/* --- BOOK INFORMATION --- */
+.detalhe-livro .book-info {
+    flex: 1 1 400px; /* Slightly more space for info text */
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 18px; /* Slightly increased gap for better vertical rhythm */
+    padding-top: 10px; /* Aligns title better with the top of the image */
+}
+
+.detalhe-livro .book-info h2 {
+    color: var(--color-dark); /* Title is dark, using primary blue for a subtitle/author if you add one */
+    font-size: 2.5em; /* Larger, more impactful title */
+    margin-bottom: 5px; /* Reduced margin, as gap takes care of spacing */
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.detalhe-livro .book-info p {
+    font-size: 1.15em; /* Slightly larger text for readability */
+    line-height: 1.6; /* Increased line-height for easier reading of large blocks of text */
+    color: var(--color-dark);
+    margin-bottom: 0;
+}
+
+.detalhe-livro .book-info .tag {
+    /* Using the accent color for a pop of contrast */
+    background-color: var(--color-accent); 
+    color: var(--color-white);
+    padding: 8px 16px; /* Increased padding for a more prominent pill shape */
+    border-radius: 25px; 
+    font-weight: 600;
+    font-size: 0.95em;
+    letter-spacing: 0.5px;
+    /* Added a subtle transition for an interactive feel */
+    transition: background-color 0.3s;
+}
+
+.detalhe-livro .book-info .tag:hover {
+    background-color: #1e7e34; /* Darker green on hover */
+}
+
+/* --- BUTTON STYLES --- */
+.detalhe-livro .book-info .btn-primary {
+    /* Assuming a general btn-primary style exists, but making it stand out */
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+    transition: all 0.3s ease;
+    margin-top: var(--spacing-md);
+    width: fit-content;
+}
+
+.detalhe-livro .book-info .btn-primary:hover {
+    background-color: var(--color-secondary);
+    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+
+/* --- FIXED BACK BUTTON --- */
+.detalhe-livro .btn-voltar-fixo {
+    /* Enhanced gradient with a more defined color stop */
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    color: var(--color-white); /* Ensure text is white for contrast */
+    font-size: 1.1em;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    border-radius: 50px; /* Fully rounded pill button for a modern floating feel */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Shadow to lift it */
+    transition: all 0.3s ease;
+    text-decoration: none; /* In case it's an anchor tag */
+    /* Add positioning styles if this is a truly *fixed* button, e.g.,
+    position: fixed; bottom: 30px; left: 30px; */
+}
+
+.detalhe-livro .btn-voltar-fixo:hover {
+    background: var(--color-dark); /* Dark hover for a dramatic shift */
+    transform: scale(1.05) translateY(-2px); /* Scale up and lift slightly more */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ========================================================================= */
+/* --- RESPONSIVE ADJUSTMENTS --- */
+/* ========================================================================= */
+
+@media (max-width: 992px) {
+    /* Adjusting the max-width for better flow on medium screens */
+    .detalhe-livro .book-detail-container {
+        max-width: 90%;
+        padding: var(--spacing-md);
+        gap: var(--spacing-md);
+    }
+}
+
+@media (max-width: 768px) {
+    .detalhe-livro .book-detail-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .detalhe-livro .book-image {
+        max-width: 300px;
+    }
+
+    .detalhe-livro .book-info {
+        text-align: center;
+        max-width: 90%; /* Allows it to stretch more on small screens */
+    }
+
+    .detalhe-livro .book-info .btn-primary {
+        margin: var(--spacing-md) auto 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .detalhe-livro .book-info h2 {
+        font-size: 2em; /* Adjusted down slightly for very small phones */
+    }
+
+    .detalhe-livro .book-info p {
+        font-size: 1.05em;
+    }
+    
+    .detalhe-livro .book-detail-container {
+        padding: var(--spacing-md) var(--spacing-sm);
     }
 }
